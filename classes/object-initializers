@@ -1,0 +1,10 @@
+Object Initializers allow you to initialize an object without the need to call or define a constructor for the needed signature.
+
+var person = new Person
+                {
+                    FirstName = "Mosh",
+                    LastName = "Hamedani"
+                };
+
+What happens is, the default Person constructor is called, and then the atributtes called in the initializer are given the specified values.
+This is a useful tool, you can make sure to only define the specific constructors you will truly need. The rest can be handled this way.

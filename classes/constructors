@@ -1,0 +1,22 @@
+-   If you don't define a constructor for your class, the engine will automatically create a default one.
+    Said default constructor doesn't receive any parameters, it just initializes an object, and sets its atributtes to their default value.
+    Defualt values -> numbers: 0 , bool: false , reference types: null , characters: empty character.
+
+-   If you do define a constructor, the engine will not create the default one. If you needed it in your code, you'd have to create it yourself.
+
+-   Constructors must have the same name as their class, otherwise, the engine won't treat them as constructors.
+
+-   A signature is what uniquely identifies a method (its return type, its name, the types and numbers of its parameters).
+
+-   Overloading means having methods that share the same name, but they hold different signatures.
+
+-   And thus, Constructor Overloading refers to having multiple constructors for a class, but each of them receiving different parameters. And thus, creating a different object.
+
+public class Customer
+{
+    public Customer() { ... }
+
+    public Customer(string name) { ... }
+
+    public Customer(int id, string name) { ... }
+}

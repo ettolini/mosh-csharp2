@@ -1,0 +1,14 @@
+Fields (like attributes)
+
+They are variables that we declare at the class level, used to store data about the class.
+Some developers believe we only need to create constructors when we need to initialize fields based on values that come from the outside.
+
+Read-only Fields
+
+Using the readonly modifier, we can make sure the field's value is only assigned once, to secure our code's data.
+
+public class Customer
+{
+    readonly List<Order> Orders = new List<Order>();
+}
+

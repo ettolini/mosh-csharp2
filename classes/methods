@@ -1,0 +1,44 @@
+The Params Modifier - The recommended one (although not used very often)
+
+public class Calculator
+{
+    public int Add(params int[] numbers){}
+}
+
+var result = calculator.Add(new int[]{ 1, 2, 3, 4 });
+var result2 = calculator.Add(1, 2, 3, 4);
+
+// Either one of the two ways is valid to use this modifier
+// It takes the given parameters and stores them into a specified array. The number of parameters is allowed to vary.
+
+The Ref Modifier - The one you really shouldn't use
+
+public class Weirdo
+{
+    public void DoWeirdThing(ref int a)
+    {
+        a += 2;
+    }
+}
+
+var a = 1;
+weirdo.DoAWeirdThing(ref a);
+
+// If you used the Weird Class without the ref modifier, a's value would be 1, because it's not a reference type. The a inside the method is a
+// different one. But, with the ref modifier, the a used inside the method is made to be the same as the one you sent as a parameter.
+
+The Out Modifier - The one you shouldn't use, but may be forced to
+
+public class MyClass
+{
+    public void MyMethod(out int result)
+    {
+        result = 1;
+    }
+}
+
+int a;
+myClass.MyMethod(out a);
+
+// This modifier allows methods to return values they weren't defined to. Like the example above, in which the method is supposed to be void,
+// and thus, return nothing. With the use of out, the 1 value is allowed to be returned even though that.

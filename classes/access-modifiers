@@ -1,0 +1,34 @@
+Access Modifiers
+They are a way to control access to a class and/or its members.
+Used to create safety in out programs, to achieve a proper Encapsulation.
+
+-   Public
+
+-   Private
+
+-   Protected
+
+-   Internal
+
+-   Protected Internal
+
+Private fields should start with an underline ( _ ) and be typed using the camelCase.
+Private fields are hidden from the outside, can only be accessed through methods. Like the getters and setters.
+
+public class Person
+{
+    private string _name;
+
+    public void SetName(string name)
+    {
+        if (!String.IsNullOrEmpty(name))
+            this._name = name;
+    }
+
+    public string GetName()
+    {
+        return _name;
+    }
+}
+
+Encapsulation concepts dictates that objects should only reveal what they can do, not how they do it.

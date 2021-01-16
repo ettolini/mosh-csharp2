@@ -1,0 +1,24 @@
+Indexers may not be something you use everyday, but they can be an useful tool.
+
+var cookie = new HttpCookie();
+cookie.Expire = DateTime.Today.AddDays(5);
+
+Using indexers      ->  cookie["name"] = "Mosh";
+                        var name = cookie["name"];
+
+Not using indexers  ->  cookie.SetItem("name", "Mosh");
+                        var name = cookie.GetItem("name");
+
+You can declare indexers as if they were properties
+
+public class HttpCookie
+{
+    public string this[string key]  // In this case, my indexer is a string, declared as "key".
+    {
+        get { ... }
+        set { ... }
+    }
+}
+
+If your indexers' values are numeric, you should use a list. If they're strings, dictionaries are a better option.
+    
