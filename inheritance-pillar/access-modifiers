@@ -1,0 +1,16 @@
+Access Modifiers
+
+-   Public: Accessible from everywhere.
+
+-   Private: Accessible only from the class.
+
+-   Protected: Accessible only from the class and its derived classes (considered a bad practice).
+    If you need to use it, it's ok. But do prefer private methods over protected ones.
+
+-   Internal: Accessible only from the same assembly (namespace). It doesn't work in another assembly that references the internal one.
+
+-   Protected Internal: Accessible only from the same assembly or any derived classes (takes too much brain power to understand/use).
+
+ACCESSING TIP:
+If you want to access classes from a different name space, you should type "using 'nameSpace's name'" at the beggining of your code.
+And every class you access, you need to reference their nameSpace first. Example: Space.Class.Method();

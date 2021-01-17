@@ -1,0 +1,21 @@
+-   Stack: Where primitive values are stored.
+-   Heap: Where reference values are stored.
+
+-   Boxing
+The process of converting a value type instance to an object reference.
+
+int number = 10;
+object obj = number;
+
+// or
+object obj = 10;
+
+// What happens behind the scenes is that the 10 value is stored in the heap, instead of the stack
+
+-   Unboxing
+Is the opposite of boxing, casting a value to a primitive type so it's stored in the stack.
+
+object obj = 10;
+int number = (int)obj;
+
+-   Boxing / Unboxing both have a performance penalty, since they have an "extra object creation".

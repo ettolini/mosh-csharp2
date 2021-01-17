@@ -1,0 +1,42 @@
+public class Car
+{ ... }
+
+public class Shape
+{ ... }
+
+public class Circle : Shape
+{ ... }
+
+-   Upcasting
+
+Convertion from a derived class to a base class.
+
+Circle circle = new Circle();
+Shape shape = circle;   // We implicitly get a new Shape Object
+
+-   Downcasting
+
+Convertion from a base class to a derived class.
+
+Circle circle = new Circle();
+Shape shape = circle;
+
+Circle anotherCircle = (Circle)shape;   // We explicitly get a new Circle Object
+
+Car car = (Car)shape;   // Throws InvalidCastException, we can prevent it with the As Keyword
+
+-   The As Keyword
+
+Car car = (Car)obj; // It might throw an exception
+
+Car car = obj as Car;   // If failed, doesn't throw an exception. It'd return null
+if (car != null)
+{ ... }
+
+-   The Is Keyword
+
+if (obj is Car) // This way you can make sure you know what you're working with before acting
+{
+    Car car = (Car)obj;
+    ...
+}
