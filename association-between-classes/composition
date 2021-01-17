@@ -1,0 +1,23 @@
+What is Composition?
+
+-   A kind of relationship between two classes that allows one to contain the other.
+-   They have a "Has-A" relationship. Example: Car has an Engine.
+
+Benefits
+
+-   Code re-use.
+-   Flexibility.
+-   A means to loose-coupling.
+
+Syntax
+    
+    // Relationship: Installer has a Logger
+    public class Installer
+    {
+        private Logger _logger;
+
+        public Installer(Logger logger)
+        {
+            _logger = logger;
+        }
+    }

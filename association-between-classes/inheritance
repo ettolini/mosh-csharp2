@@ -1,0 +1,23 @@
+What is Inheritance?
+
+-   A kind of relationship between two classes that allows one to inherit code from the other.
+-   They have a "Is-A" relationship. Example: A Car is a Vehicle (Car inherits from Vehicle).
+
+Benefits
+
+-   Code re-use.
+-   Polymorphic behaviour.
+
+Syntax
+
+    // The Parent / Base / Super class
+    public class PresentationObject
+    {
+        // Common shared code
+    }
+
+    // The Child / Derived / Sub class 
+    public class Text : PresentationObject
+    {
+        // Code specific to Text
+    }
