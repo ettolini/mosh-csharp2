@@ -1,0 +1,24 @@
+Interfaces
+
+-   The name of interfaces are prefixed with "I".
+-   Their methods don't have bodies.
+-   They define the capability a class should provide.
+-   Classes that use interfaces don't know about the classes that implement their methods, they only care about the interface they reference.
+-   You can't inherit more than one class, but you can implement multiple interfaces
+-   If a class is declared to be implementing an interface, it indeed must have an implementation to every method declarated in the interface.
+
+public interface IShippingCalculator
+{
+    float CalculateShipping(Order order);
+}
+
+public class ShippingCalculator : IShippingCalculator   // ShippingCalculator implements IShippingCalculator
+{
+    public float CalculateShipping(Order order)
+    {
+        if (order.TotalPrice < 30f)
+            return order.TotalPrice * 0.1;
+        
+        return 0;
+    }
+}
