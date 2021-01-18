@@ -1,0 +1,12 @@
+Sealed Modifiers prevent derivation or overriding of methods.
+
+public sealed class Circle : Shape  // If we apply it, we cannot create a class that derives from Circle
+{
+    public sealed override void Draw()  // It can only be applied to methods that are overriding virtual methods
+    {
+        Console.WriteLine("Drawing a circle");
+    }
+}
+
+This feature optimizes run-time, but not in a noticeable way. So it's hardly ever used.
+There are some classes in the .NET Framework that are defined as sealed, so you cannot inherit from them, unless you use Extension Methods.
